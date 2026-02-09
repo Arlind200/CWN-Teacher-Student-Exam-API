@@ -7,11 +7,20 @@ This is the first version of the app.
 
 ---
 
-### Changes Introduced
+### API layer
+- CQRS pattern
+- SQLite database with EF core as database
+- Three endpoints (UploadExam POST, GetExamsByExamId GET, GetExamByStudentId GET)
+- No logic for duplicate xml loading
+- CLEAN architecture, clear seperation of concerns between layers, dependencies pointing inward
+
+---
+
+### Frontend
 - Rendered student exam results directly into table
 - Added circular progress UI based on `scorePercentage`
 - UI only renders when valid data is returned
-- Improved some defensive checks to prevent runtime errors
+- Improved defensive checks to prevent runtime errors
 
 ---
 
@@ -56,7 +65,8 @@ This is the first version of the app.
 
 ---
 
-### 🧪 Manual Testing
+### Manual Testing
 - Verified with valid exam ID
 - Verified with exam containing zero correct tasks
 - Verified with empty response
+- Tests were not written integration nor unit tests
