@@ -13,6 +13,7 @@ This is the first version of the app.
 - Three endpoints (UploadExam POST, GetExamsByExamId GET, GetExamByStudentId GET)
 - No logic for duplicate xml loading
 - CLEAN architecture, clear seperation of concerns between layers, dependencies pointing inward
+- AutoMapper was not used for Model mapping, mapping was done manually from request/response types to domain models.
 
 ---
 
