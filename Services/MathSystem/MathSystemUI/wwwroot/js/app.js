@@ -50,20 +50,27 @@ function renderScore(percentage) {
 }
 
 
+
 async function uploadXml() {
     const file = document.getElementById("xmlFile").files[0];
     if (!file) return alert("Select XML file");
 
-    const text = await file.text();
+    const formData = new FormData();
+    formData.append("file", file);
 
-    await fetch(`${API_BASE}/upload`, {
+    const response = await fetch(`${API_BASE}/upload`, {
         method: "POST",
-        headers: { "Content-Type": "application/xml" },
-        body: text
+        body: formData // ❗ NO headers
     });
+
+    if (!response.ok) {
+        console.error("Upload failed:", response.status);
+        return;
+    }
 
     alert("XML uploaded successfully");
 }
+
 
 async function loadExamResults() {
     const examId = document.getElementById("examId").value;
