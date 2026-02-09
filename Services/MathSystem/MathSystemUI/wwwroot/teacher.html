@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Panel</title>
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+<body>
+    <h2>Teacher Panel</h2>
+
+    <h3>Upload Exam XML</h3>
+    <input type="file" id="xmlFile" />
+    <button onclick="uploadXml()">Upload</button>
+
+    <h3>Exam Results</h3>
+    <label>Exam ID:</label>
+    <input id="examId" />
+    <button onclick="loadExamResults()">Get Results</button>
+
+    <table id="teacherTable">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Correct</th>
+                <th>Total</th>
+                <th>Score %</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="/js/app.js"></script>
+
+</body>
+</html>

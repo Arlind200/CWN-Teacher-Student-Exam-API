@@ -1,0 +1,6 @@
+@MathSystemUI_HostAddress = http://localhost:7272
+
+GET {{MathSystemUI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
