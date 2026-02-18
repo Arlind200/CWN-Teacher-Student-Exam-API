@@ -8,7 +8,7 @@ namespace MathSystem.Application.Responses
         public string TeacherId { get; init; } = default!;
         public IEnumerable<ExamTaskDto> Tasks { get; init; } = Enumerable.Empty<ExamTaskDto>();
 
-        // New: score tracking
+        // Score tracking properties
         public int TotalTasks { get; init; }
         public int CorrectTasks { get; init; }
 
